@@ -1,0 +1,48 @@
+{
+  "name": "rfc2253",
+  "version": "0.0.0",
+  "description": "LDAPv3 Distinguished Name parser and formatter.",
+  "main": "lib/index.js",
+  "files": [
+    "lib/",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "scripts": {
+    "dist": "babel -d lib src",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/foss-haas/rfc2253.git"
+  },
+  "keywords": [
+    "ldap",
+    "ad",
+    "directory",
+    "dn",
+    "rdn",
+    "distinguished",
+    "x.500",
+    "x500",
+    "x.501",
+    "x501",
+    "rfc-2253",
+    "rfc2253",
+    "rfc-1779",
+    "rfc1779"
+  ],
+  "author": "Alan Plum <me@pluma.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/foss-haas/rfc2253/issues"
+  },
+  "homepage": "https://github.com/foss-haas/rfc2253#readme",
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "babel-eslint": "^4.0.10",
+    "core-js": "^1.1.1",
+    "eslint": "^1.2.1"
+  }
+}
