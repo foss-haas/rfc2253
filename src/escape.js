@@ -1,6 +1,6 @@
 'use strict';
 const slice = Array.prototype.slice;
-const RESERVED = ',+"\\<>;';
+const RESERVED = ',+"\\<>;\n\r=/';
 
 function pad(str) {
   if (str.length < 2) return '0' + str;
