@@ -1,10 +1,11 @@
 'use strict';
 const slice = Array.prototype.slice;
-const RESERVED = ',+"\\<>;\n\r=/';
+const RESERVED = ',+"\\<>;';
+const SPECIAL = '\n\r=/';
 
 function pad(str) {
-  if (str.length < 2) return '0' + str;
-  return str;
+  if (str.length % 2 === 0) return str;
+  return '0' + str;
 }
 
 export default function escape(value) {
@@ -15,8 +16,9 @@ export default function escape(value) {
   let result = [];
   for (let i = 0; i < tokens.length; i++) {
     let token = tokens[i];
-    if (RESERVED.indexOf(token) === -1) result.push(token);
-    else result.push('\\' + token);
+    if (RESERVED.indexOf(token) !== -1) result.push('\\' + token);
+    else if (SPECIAL.indexOf(token) === -1) result.push(token);
+    else result.push('\\' + pad(token.charCodeAt(0).toString(16)));
   }
   if (result[0] === '#') {
     result[0] = '\\#';
