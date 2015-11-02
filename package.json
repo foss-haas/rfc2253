@@ -42,7 +42,7 @@
   "devDependencies": {
     "babel": "^5.8.21",
     "babel-eslint": "^4.0.10",
-    "core-js": "^1.1.1",
+    "core-js": "^1.2.5",
     "eslint": "^1.2.1"
   }
 }
