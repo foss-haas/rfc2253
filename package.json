@@ -10,8 +10,10 @@
     "package.json"
   ],
   "scripts": {
+    "lint": "eslint src; eslint test",
     "dist": "babel -d lib src",
-    "lint": "eslint src"
+    "test-only": "mocha --recursive --reporter spec test/**/*.spec.js",
+    "test": "npm run lint && npm run dist && npm run test-only"
   },
   "repository": {
     "type": "git",
@@ -42,7 +44,9 @@
   "devDependencies": {
     "babel": "^5.8.21",
     "babel-eslint": "^4.0.10",
+    "chai": "^3.5.0",
     "core-js": "^1.1.1",
-    "eslint": "^1.8.0"
+    "eslint": "^1.8.0",
+    "mocha": "^3.2.0"
   }
 }
