@@ -1,7 +1,5 @@
-'use strict';
 import DistinguishedName from './dn';
 import RelativeDistinguishedName from './rdn';
-
 const slice = Array.prototype.slice;
 
 export default function parse(seq) {

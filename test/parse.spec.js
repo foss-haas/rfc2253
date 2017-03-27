@@ -1,5 +1,3 @@
-'use strict';
-
 const { assert } = require('chai');
 const { parse } = require('../lib/index.js');
 

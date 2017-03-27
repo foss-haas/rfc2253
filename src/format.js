@@ -1,4 +1,3 @@
-'use strict';
 import DistinguishedName from './dn';
 import RelativeDistinguishedName from './rdn';
 

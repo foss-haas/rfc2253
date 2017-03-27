@@ -1,4 +1,3 @@
-'use strict';
 import RelativeDistinguishedName from './rdn';
 
 export default class DistinguishedName {
