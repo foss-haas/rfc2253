@@ -1,6 +1,9 @@
 {
-  "optional": [
-    "es7.exportExtensions",
-    "es7.functionBind"
+  "comments": false,
+  "presets": ["es2015"],
+  "plugins": [
+    "transform-function-bind",
+    "syntax-export-extensions",
+    "transform-es2015-modules-commonjs"
   ]
 }

@@ -1,4 +1,3 @@
-'use strict';
 const slice = Array.prototype.slice;
 const RESERVED = ',+"\\<>;';
 const SPECIAL = '\n\r=/';

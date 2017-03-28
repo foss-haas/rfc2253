@@ -1,4 +1,3 @@
-'use strict';
 import escape from './escape';
 
 function imap(fn) {
