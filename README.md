@@ -161,8 +161,8 @@ Looks up the given key and returns all values.
 
 ```js
 let dn = rfc2253.parse('CN=Wayne\\, Bruce,DC=Wayne Enterprises,DC=com,OU=Research and Development,OU=Gadget Services');
-dn.get('OU'); // ['Research and Development', 'Gadget Services']
-dn.get('DC'); // ['Wayne Enterprises', 'com']
+dn.getAll('OU'); // ['Research and Development', 'Gadget Services']
+dn.getAll('DC'); // ['Wayne Enterprises', 'com']
 ```
 
 ### set
