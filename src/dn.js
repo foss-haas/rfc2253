@@ -19,6 +19,16 @@ export default class DistinguishedName {
       return this._rdns[i].get(key);
     }
   }
+  getAll(key) {
+    const results = [];
+    for (let i = 0; i < this._rdns.length; i++) {
+      if (!this._rdns[i].has(key)) continue;
+      const rdnValue = this._rdns[i].get(key);
+      if (results.includes(rdnValue)) continue;
+      results.push(rdnValue);
+    }
+    return results;
+  }
   set(key, value) {
     if (typeof key === 'number') {
       if (value instanceof RelativeDistinguishedName) {

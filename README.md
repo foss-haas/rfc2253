@@ -147,6 +147,24 @@ let rdn = dn.get(0); // <RelativeDistinguishedName>
 rdn.get('CN'); // 'Wayne, Bruce'
 ```
 
+### getAll
+
+Looks up the given key and returns all values.
+
+**Arguments**
+
+* **key**: *string*
+
+  The key in at least one RDN.
+
+**Examples**
+
+```js
+let dn = rfc2253.parse('CN=Wayne\\, Bruce,DC=Wayne Enterprises,DC=com,OU=Research and Development,OU=Gadget Services');
+dn.getAll('OU'); // ['Research and Development', 'Gadget Services']
+dn.getAll('DC'); // ['Wayne Enterprises', 'com']
+```
+
 ### set
 
 Sets the given offset to the given `RelativeDistinguishedName` or sets the given key to the given value.
